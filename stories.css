@@ -1,0 +1,270 @@
+.stories-section {
+  min-height: 100vh;
+  width: 100%;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.stories-section h1 {
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  font-family: restore;
+  color: #02afb8;
+  letter-spacing: 2px;
+}
+
+.stories-container {
+  min-height: 100vh;
+  width: 100%;
+  background-image: url("./download.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  padding-top: 4rem;
+}
+
+.contain {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+}
+
+.left {
+  width: 40%;
+  min-height: 100vh;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.content1 {
+  width: 100%;
+  height: auto;
+  background-color: #02afb8;
+  min-height: 319px;
+  border-radius: 25px;
+  padding: 45px 60px 30px 40px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.content1 p,
+.content2 p {
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  color: #fff;
+  font-weight: 300;
+  text-align: justify;
+}
+
+.content1 h2,
+.content2 h2 {
+  font-family: restore;
+  color: #fff;
+  letter-spacing: 2px;
+}
+
+.video {
+  width: 70%;
+  min-height: 319px;
+  background-image: url("https://projects.synergynexa.com/ps/wp-content/uploads/2025/07/1.png");
+  background-position: center;
+  background-size: cover;
+  border-radius: 25px;
+  position: relative;
+}
+
+i.play {
+  position: absolute;
+  bottom: 5%;
+  right: 5%;
+  font-size: 3rem;
+  color: #00000071;
+  cursor: pointer;
+}
+
+.right {
+  width: 60%;
+  min-height: 100vh;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.content2 {
+  width: 50%;
+  height: auto;
+  background-color: #02afb8;
+  min-height: 319px;
+  border-radius: 25px;
+  padding: 30px 36px;
+  margin-right: 4rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.right-image {
+  width: 70%;
+  background-image: url("https://projects.synergynexa.com/ps/wp-content/uploads/2025/07/image.png");
+  background-position: right center;
+  background-size: cover;
+  border-radius: 25px;
+}
+
+.right-pera {
+  width: 80%;
+  padding: 25px;
+  position: relative;
+}
+
+.right-pera::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, #ffffff, transparent);
+  border-radius: 25px;
+  pointer-events: none;
+}
+
+.right-pera p {
+  width: 70%;
+  font-size: clamp(0.9rem, 2vw, 1.2rem);
+  color: #000;
+  font-weight: 300;
+  text-align: justify;
+  position: relative;
+  z-index: 2;
+}
+
+@media (max-width: 1024px) {
+  .stories-container {
+    background-image: url("https://projects.synergynexa.com/ps/wp-content/uploads/2025/07/WhatsApp-Image-2025-05-26-at-4.09.44-PM-1.png");
+    background-size: 130%;
+    background-position: center;
+    padding-top: 0;
+  }
+
+  .contain {
+    flex-direction: column;
+    padding: 1rem;
+    min-height: auto;
+  }
+
+  .left {
+    width: 100%;
+    padding: 1rem;
+    gap: 2rem;
+    min-height: auto;
+  }
+
+  .content1 {
+    width: 55%;
+    max-width: 100%;
+  }
+
+  .video {
+    background-image: url("https://projects.synergynexa.com/ps/wp-content/uploads/2025/07/i2.png");
+    min-height: 400px;
+  }
+
+  .right {
+    width: 100%;
+    padding: 1rem;
+    align-items: flex-start;
+    min-height: auto;
+    gap: 2rem;
+  }
+
+  .content2 {
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .stories-container {
+    background-image: none;
+  }
+
+  .contain {
+    padding: 0;
+  }
+
+  .left {
+    padding: 0;
+    gap: 1rem;
+  }
+
+  .content1 {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .content1 p,
+  .content2 p {
+    line-height: 1.5rem;
+  }
+
+  .video {
+    width: 100%;
+    min-height: 250px;
+  }
+
+  .center {
+    min-height: 400px;
+    width: 100%;
+    background-image: url("https://projects.synergynexa.com/ps/wp-content/uploads/2025/07/WhatsApp-Image-2025-05-26-at-4.09.44-PM-1.png");
+    background-size: cover;
+    background-position: center;
+    margin: 1rem 0;
+    border-radius: 25px;
+  }
+
+  .right {
+    padding: 0;
+    gap: 1rem;
+  }
+
+  .content2 {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .women-img {
+    min-height: 350px;
+    width: 100%;
+    background-image: url("https://projects.synergynexa.com/ps/wp-content/uploads/2025/07/image.png");
+    background-size: cover;
+    background-position: right;
+    border-radius: 25px;
+  }
+
+  .right-image {
+    background-image: none;
+    width: 100%;
+  }
+
+  .right-pera {
+    width: 100%;
+    border-radius: 25px;
+    padding: 20px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.477);
+  }
+
+  .right-pera p {
+    width: 100%;
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+}

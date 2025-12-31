@@ -1,0 +1,130 @@
+@font-face {
+  font-family: montserrat;
+  src: url(./Montserrat-VariableFont_wght.ttf);
+}
+
+@font-face {
+  font-family: restore;
+  src: url(./Restore-W00-Bold.ttf);
+}
+
+.core-section {
+  display: flex;
+  gap: 4rem;
+  padding: 0 min(3%, 100px);
+}
+
+.core-contain {
+  width: 50%;
+}
+
+.core-contain h1 {
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  font-family: restore;
+  color: #02afb8;
+  letter-spacing: 2px;
+}
+
+.accordion-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  cursor: pointer;
+  padding: 1.5rem 0;
+  border-bottom: 1px solid #2f2f2f;
+}
+
+.accordion-header p {
+  font-size: clamp(1.2rem, 2vw, 1.6rem);
+  font-family: montserrat;
+  font-weight: 300;
+  letter-spacing: 2px;
+}
+
+.accordion-content p,
+.accordion-content ul {
+  font-size: clamp(1rem, 3vw, 1.3rem);
+  font-family: montserrat;
+  font-weight: 300;
+  letter-spacing: 2px;
+}
+
+.accordion-content ul {
+  padding-left: 2rem;
+}
+
+.accordion-content ul li {
+  margin-bottom: 1rem;
+}
+
+.accordion-content button {
+  width: fit-content;
+  background-color: #02afb8;
+  border: none;
+  outline: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-size: clamp(1rem, 3vw, 1.3rem);
+  font-family: montserrat;
+  color: #fff;
+  cursor: pointer;
+}
+
+.accordion-content {
+  height: 0;
+  overflow: hidden;
+  transition: height 0.4s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.accordion-item.active .accordion-content {
+  transition: height 0.4s ease;
+  padding-top: 1.5rem;
+}
+
+/* Image */
+.core-img {
+  height: 100%;
+  width: 50%;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+
+.core-img img {
+  width: 100%;
+  height: 100%;
+  border-radius: 30px;
+  object-fit: contain;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .core-section {
+    flex-direction: column-reverse;
+  }
+
+  .core-contain {
+    width: 100%;
+  }
+
+  .core-img {
+    width: 100%;
+  }
+
+  .accordion-content ul {
+    padding-left: 1.5rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .core-section {
+    gap: 2rem;
+  }
+}

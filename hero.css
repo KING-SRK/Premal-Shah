@@ -1,0 +1,84 @@
+@font-face {
+  font-family: restore;
+  src: url(./Restore-W00-Bold.ttf);
+}
+
+.hero-section {
+  height: 85vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 4rem;
+}
+
+.background {
+  width: 95%;
+  height: 100%;
+  background-image: url("https://projects.synergynexa.com/ps/wp-content/uploads/2025/07/steptodown.com557900-scaled.png");
+  background-size: cover;
+  background-position: top;
+  border-radius: 60px;
+  position: relative;
+  overflow: hidden;
+}
+
+.background img {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 100%;
+  width: auto;
+  object-fit: contain;
+  z-index: 2;
+}
+
+.background h1 {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: clamp(2.5rem, 13vw, 13rem);
+  color: white;
+  z-index: 5;
+  text-transform: uppercase;
+  white-space: nowrap;
+  line-height: 0.7em;
+  font-family: restore;
+}
+
+.background::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  height: 35%;
+  width: 100%;
+  background: linear-gradient(to top, rgba(2, 175, 184, 0.7), transparent);
+  z-index: 3;
+}
+
+@media (max-width: 1024px) {
+  .hero-section {
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .hero-section {
+    height: 35vh;
+  }
+  .background {
+    height: 100%;
+    width: 92%;
+    border-radius: 30px;
+  }
+
+  .background img {
+    height: 75%;
+  }
+  .background h1 {
+    font-size: 2.5rem;
+  }
+}

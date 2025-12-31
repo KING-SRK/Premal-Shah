@@ -1,0 +1,116 @@
+.cta-section {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem 0;
+}
+
+.cta-section p {
+  text-align: center;
+  font-size: clamp(1rem, 2vw, 1.9rem);
+  letter-spacing: 2px;
+  font-weight: 200;
+}
+
+.cta-container {
+  width: 100%;
+  height: 100%;
+  background-image: url("https://projects.synergynexa.com/ps/wp-content/uploads/2025/07/WhatsApp-Image-2025-05-26-at-4.09.43-PM-2-2.jpeg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  border-radius: 25px;
+}
+
+.cta-play {
+  width: 30%;
+  position: absolute;
+  top: 3%;
+  left: 2%;
+  font-size: 3rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+.corner-card {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  border-radius: 45px 0px 0px 0px;
+  padding-top: 15px;
+  padding-bottom: 0px;
+  padding-left: 15px;
+  padding-right: 15px;
+  background-color: #fff;
+}
+
+.corner-card::after {
+  content: "";
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 45px;
+  left: -30px;
+  mask-image: radial-gradient(circle at left top, transparent 30px, black 31px);
+  mask-composite: exclude;
+  background: white;
+}
+
+.corner-card button {
+  width: 100%;
+  background-color: rgb(2, 175, 184);
+  color: #fff;
+  font-family: Montserrat, sans-serif;
+  font-size: 20px;
+  font-weight: 300;
+  letter-spacing: 1px;
+  border: none;
+  border-width: 2px;
+  border-radius: 30px;
+  padding: 20px;
+}
+
+@media (max-width: 1024px) {
+  .cta-section p {
+    letter-spacing: 3px;
+  }
+  .corner-card {
+    width: 50%;
+  }
+
+  .corner-card button {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 767px) {
+  .corner-card {
+    bottom: 2.5%;
+    width: 100%;
+    background-color: transparent;
+  }
+
+  .corner-card::after {
+    display: none;
+  }
+
+  .corner-card button {
+    font-size: 15px;
+    padding: 18px 12px;
+    border: 2px solid #fff;
+  }
+
+  .cta-play {
+    width: 30%;
+    position: absolute;
+    top: 3%;
+    left: 5%;
+    font-size: 3rem;
+    color: #fff;
+    cursor: pointer;
+  }
+}
