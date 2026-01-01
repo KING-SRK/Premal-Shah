@@ -40,3 +40,28 @@ function accordion() {
   firstContent.style.height = firstContent.scrollHeight + "px";
 }
 accordion();
+
+new Swiper(".testimonial-swiper", {
+  slidesPerView: 4, // ✅ 4 ta card
+  loop: true, // infinite scroll
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
+  },
+  speed: 800,
+
+  breakpoints: {
+    0: {
+      slidesPerView: 1,
+    },
+    576: {
+      slidesPerView: 2,
+    },
+    768: {
+      slidesPerView: 3,
+    },
+    1024: {
+      slidesPerView: 4,
+    },
+  },
+});
