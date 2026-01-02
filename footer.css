@@ -1,11 +1,14 @@
-.footer-section {
+footer {
   width: 100%;
   height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding: 2rem 0;
 }
 
 .footer-container {
-  width: 100%;
+  width: 95%;
   height: 100%;
   background-image: url("https://projects.synergynexa.com/ps/wp-content/uploads/2025/07/WhatsApp-Image-2025-05-26-at-4.09.46-PM.png");
   background-size: cover;
@@ -171,7 +174,7 @@
 }
 
 @media (max-width: 768px) {
-  .footer-section {
+  footer {
     height: 100vh;
   }
 
